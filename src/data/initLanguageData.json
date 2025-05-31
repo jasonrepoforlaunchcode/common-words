@@ -1,0 +1,195 @@
+[
+    {
+        "id": "1000",
+        "name": "French",
+        "decks": [
+                    {"id":"10000","name":"Nouns", "list": 
+                        [
+                            {
+                                "id": 0,
+                                "word": "le fromage",
+                                "definition": "cheese",
+                                "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZaxgWTi6Elz62jcP3MrQdfr2xudnvVHpuuA&s",
+                                "soundfile": "/audio/pronunciation_fr_le_fromage.mp3",
+                                "daysUntilNextReview": 0.0,
+                                "dateOfLastReview" : 1748034949675
+                                 
+                            },
+                            {
+                                "id": 1,
+                                "word": "la cuisine",
+                                "definition": "kitchen",
+                                "image": "https://vazardhomecuisines.com/app/uploads/2024/09/cuisine-ambiance-design-laque-noire-vazard-home-cuisine-morel-.jpg",
+                                "soundfile": "/audio/pronunciation_fr_la_cuisine.mp3",
+                                "daysUntilNextReview": 0.0,
+                                "dateOfLastReview" : 1748034949675 
+                            },
+                            {
+                                "id": 2,
+                                "word": "la fourchette",
+                                "definition": "fork",
+                                "image": "https://upload.wikimedia.org/wikipedia/en/b/b5/Kertesz_The_Fork.jpg",
+                                "soundfile": "/audio/pronunciation_fr_la_fourchette.mp3",
+                                "daysUntilNextReview": 2.0,
+                                "dateOfLastReview" : 1748034949675 
+                            },
+                            {
+                                "id": 3,
+                                "word": "la cuillere",
+                                "definition": "spoon",
+                                "image": "https://ma-tasse-en-bois.fr/cdn/shop/files/cuillere-bois-design-ma-tasse-en-bois.png?v=1697305758",
+                                "soundfile": "/audio/pronunciation_fr_une_cuillère.mp3",
+                                "daysUntilNextReview": 1.0,
+                                "dateOfLastReview" : 1748034949675 
+                            },
+                            {
+                                "id": 4,
+                                "word": "le frigo",
+                                "definition": "refrigerator",
+                                "image": "https://dkyhanv6paotz.cloudfront.net/live/fit-in/2048x/medias/nfb_tube/thumbs_xlarge/2017/Le_frigo_50632_XL.jpg",
+                                "soundfile": "/audio/pronunciation_fr_le_frigo.mp3",
+                                "daysUntilNextReview": 0.0,
+                                "dateOfLastReview" : 1748034949675 
+                            }                           
+                        ]
+                    },
+                    {"id":"10001","name":"Verbs", "list": 
+                        [
+                            {
+                                "id": 0,
+                                "word": "cuisiner",
+                                "definition": "cook",
+                                "image": "",
+                                "soundfile": "",
+                                "daysUntilNextReview": 0.0,
+                                "dateOfLastReview" : 1748034949675
+
+                            },
+                            {
+                                "id": 1,
+                                "word": "manger",
+                                "definition": "eat",
+                                "image": "",
+                                "soundfile": "",
+                                "daysUntilNextReview": 10.0,
+                                "dateOfLastReview" : 1748034949675 
+                            },
+                            {
+                                "id": 2,
+                                "word": "nettoyer",
+                                "definition": "clean",
+                                "image": "",
+                                "soundfile": "",
+                                "daysUntilNextReview": 0.0,
+                                "dateOfLastReview" : 1748034949675 
+                            }
+                        ]
+                    }
+                ]
+    },
+    {
+        "id": "1001",
+        "name": "Italian",
+        "decks": [
+                    {"id":"10000","name":"Nouns", "list": 
+                        [
+                            {
+                                "id": 0,
+                                "word": "formaggio",
+                                "definition": "cheese",
+                                "image": "",
+                                "soundfile": "",
+                                "daysUntilNextReview": 0.0,
+                                "dateOfLastReview" : 1748034949675 
+                            },
+                            {
+                                "id": 1,
+                                "word": "cucina",
+                                "definition": "kitchen",
+                                "image": "",
+                                "soundfile": "",
+                                "daysUntilNextReview": 0.0,
+                                "dateOfLastReview" : 1748034949675 
+                            },
+                            {
+                                "id": 2,
+                                "word": "forchetta",
+                                "definition": "fork",
+                                "image": "",
+                                "soundfile": "",
+                                "daysUntilNextReview": 0.0,
+                                "dateOfLastReview" : 1748034949675 
+                            }
+                        ]
+                    },
+                    {"id":"10001","name":"Adjectives", "list": 
+                        [
+                            {
+                                "id": 0,
+                                "word": "delizioso",
+                                "definition": "delicious",
+                                "image": "",
+                                "soundfile": "",
+                                "timeUntidaysUntilNextReviewlNextReview": 0.0,
+                                "dateOfLastReview" : 1748034949675 
+                            },
+                            {
+                                "id": 1,
+                                "word": "caldo",
+                                "definition": "warm",
+                                "image": "",
+                                "soundfile": "",
+                                "daysUntilNextReview": 0.0,
+                                "dateOfLastReview" : 1748034949675 
+                            },
+                            {
+                                "id": 2,
+                                "word": "salato",
+                                "definition": "salty",
+                                "image": "",
+                                "soundfile": "",
+                                "daysUntilNextReview": 0.0,
+                                "dateOfLastReview" : 1748034949675 
+                            }
+                        ]
+                    }
+                ]
+    },
+    {
+        "id": "1002",
+        "name": "Spanish",
+        "decks": [
+                    {"id":"10000","name":"Nouns", "list": 
+                        [
+                            {
+                                "id": 0,
+                                "word": "queso",
+                                "definition": "cheese",
+                                "image": "",
+                                "soundfile": "",
+                                "daysUntilNextReview": 0.0,
+                                "dateOfLastReview" : 1748034949675 
+                            },
+                            {
+                                "id": 1,
+                                "word": "cocina",
+                                "definition": "kitchen",
+                                "image": "",
+                                "soundfile": "",
+                                "daysUntilNextReview": 0.0,
+                                "dateOfLastReview" : 1748034949675 
+                            },
+                            {
+                                "id": 2,
+                                "word": "tenedor",
+                                "definition": "fork",
+                                "image": "",
+                                "soundfile": "",
+                                "daysUntilNextReview": 0.0,
+                                "dateOfLastReview" : 1748034949675 
+                            }
+                        ]
+                    }
+                ]
+    }
+]
