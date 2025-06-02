@@ -21,8 +21,13 @@ const Main = ({languageData}) => {
     const [showingPopUp, setShowingPopUp] = useState({showing: false, name: "", id: ""});
     
     useEffect(()=>{
-        setLocalData(languageData);
+        if (localStorage.getItem("data") === null){
+            setLocalData(languageData);
+            setData(getLocalData());
+        }
         setData(getLocalData());
+
+
     }, [])
 
     useEffect(() => {
