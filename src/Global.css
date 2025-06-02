@@ -2,7 +2,7 @@
   --dark: #272838;
   --dark-pale: #4a4b54;
   --light: #f6eedf;
-  --light-pale: #e2ebed;
+  --light-pale: #f1e4c8;
   --white: #f5f6ff;
   --grey: #bcbdc5;
   --mid: #004e81;
@@ -11,7 +11,6 @@
   --delete-hover: #b10000;
   --prominent: #009133;
   --prominent-bright: #82ae2a;
-  
 }
 
 body {
@@ -48,7 +47,7 @@ button {
   padding: 15px 25px;
   text-align: center;
   text-decoration: none;
-  font-size: 1.3em;
+  font-size: 1.2em;
   margin: 8px;
   box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.5);
   
@@ -63,7 +62,7 @@ button:disabled:hover {
   color: var(--white);
 }
 .start-quiz {
-  background-color: var(--highlight);
+  background-color: var(--prominent);
   color: var(--white);
 }
 
@@ -118,6 +117,13 @@ button:hover {
   background-color: var(--delete);
 }
 
+.final-delete-button-small {
+  font-size: 0.6em;
+  padding: 10px 15px;
+  margin: 8px;
+  background-color: var(--delete);
+}
+
 .final-delete-button:hover {
   background-color: var(--delete-hover);
 }
@@ -125,6 +131,9 @@ button:hover {
   background-color: var(--delete);
 }
 
+.final-delete-button-small:hover {
+  background-color: var(--delete-hover);
+}
 .topnav {
   display: flex;
   justify-content:space-between;
@@ -150,7 +159,6 @@ button:hover {
   color: var(--highlight);
 }
 
-/* Add a color to the active/current link */
 .topnav a.active {
   background-color: var(--mid);
   color: #92828D;
@@ -190,7 +198,7 @@ button:hover {
   max-width: 60%;
 }
 
-.link {/*for custom "link to" styling*/
+.link {
   color:var(--white);
   font:200;
   font-size: 1.3em;
@@ -267,7 +275,7 @@ img {
 .mnemonic-image {
   display: flex;
   max-width: 70%;
-  max-height: 50%;
+  max-height: 40%;
   justify-content: center;
 }
 
@@ -277,61 +285,33 @@ img {
 }
 
 .image-cell {
-  max-width: 30%;
+  max-width: 100px;
+  white-space: nowrap;
+  overflow:hidden;
 }
 
 .soundfile-cell {
-  max-width: 20%;
+  max-width: 100px;
+  white-space: nowrap;
+  overflow:hidden;
 }
 
 table {
-  max-width: 130px;
+  max-width: 250px;
+  @media (width < 720px){
+    font-size: 0.5em;
+    max-width: 70px;
+  }
 }
 
 td, th {
-  word-wrap: break-word;
-  max-width: 150px;
+  min-width: 50px;
+  max-width: 200px;
 }
 
 tr:nth-child(even) {
   background-color: var(--light-pale);
 }
-/*.flex-item {
-  background: rgb(255, 244, 234);
-  padding: 5px;
-  width: 200px;
-  height: 50px;
-  margin-top: 10px;
-  line-height: 50px;
-  color: rgb(0, 37, 6);
-  font-weight: bold;
-  font-size: 1rem;
-  text-align: center;
-  align-items: center;
-}*/
-
-/*@keyframes unfold-old {
-  0% {
-    transform: scale(.9);
-    background-color: #92828d00;
-    border-radius: 100%;
-  }
-  50% {
-    background-color: #5a2d689d;
-  }
-  100% {
-    transform: scale(1.0);
-    background-color: #83346a;
-  }
-}
-
-@keyframes unfold {
-  0% {
-    transform: translateY(-50px);
-    opacity: 0;
-  }
-}
-*/
 
 form {
   display: grid;
@@ -342,7 +322,6 @@ form {
 
   }
 }
-
 
 label {
   text-transform: uppercase;
@@ -361,5 +340,5 @@ footer {
   bottom: 0;
   color: rgb(34, 34, 34);
   text-align: center;
-  padding-bottom: 20px;
+  padding: 10px;
 }

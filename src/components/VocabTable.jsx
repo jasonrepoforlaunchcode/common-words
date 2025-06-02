@@ -20,7 +20,7 @@ const VocabTable = ({deck, returnNewData}) => {
                 <td name="definition"><div contenteditable="true" spellcheck="false">{word.definition}</div></td>
                 <td className="image-cell" name="image"><div contenteditable="true" spellcheck="false">{word.image}</div></td>
                 <td className="soundfile-cell" name="soundfile"><div contenteditable="true" spellcheck="false">{word.soundfile}</div></td>
-                <td><button onClick={removeRow} id={wordKey}>delete</button></td>
+                <td><button className="final-delete-button-small" onClick={removeRow} id={wordKey}>x</button></td>
             </tr>
         }
     )
@@ -46,12 +46,12 @@ const VocabTable = ({deck, returnNewData}) => {
         }
         const rows = table.querySelectorAll('tr');
         const newDeck = [];
-        for (let i = 1; i < rows.length; i++) {//looping through the table rows, minus the header
+        for (let i = 1; i < rows.length; i++) {
             const cells = rows[i].querySelectorAll('td');
             const newWord = {}
             for(let key of Object.keys(deck[i-1])){
                 let isMatch = -1;
-                for (let j = 0; j <cells.length; j++){//looping through the cells of the current row looking for a match
+                for (let j = 0; j <cells.length; j++){
                     if ( key === cells[j].getAttribute("name")){
                         isMatch = j;
                     }
@@ -75,8 +75,8 @@ const VocabTable = ({deck, returnNewData}) => {
     return (
         <>
             {tableJSX}
-            <button onClick={submitChanges}>save</button>
-            <button onClick={revertChanges}>back</button>
+            <button onClick={submitChanges}>save changes</button>
+            <button onClick={revertChanges}>revert</button>
         </>
     );
 }
