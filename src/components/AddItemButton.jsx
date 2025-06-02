@@ -1,5 +1,5 @@
 import {useEffect, useState} from 'react';
-const AddItemButton = ({handleNewListItem, sendBackEditingStatus}) => {
+const AddItemButton = ({text, handleNewListItem, sendBackEditingStatus}) => {
     const [isEditing, setIsEditing] = useState(false);
     const [itemName, setItemName] = useState("");
 
@@ -23,10 +23,10 @@ const AddItemButton = ({handleNewListItem, sendBackEditingStatus}) => {
     }
 
     return (
-        <span className="add-language-button" >
+        <span >
             {isEditing 
-                ? <span><button onClick={setEditingFalse}>save</button> <input type="text" onChange={handleChange}></input></span>
-                : <span><button onClick={setEditingTrue}>+</button> new</span>}
+                ? <span><button className="add-button" onClick={setEditingFalse}>save</button> <input type="text" onChange={handleChange}></input></span>
+                : <span><button className="add-button" onClick={setEditingTrue}>+</button> {text}</span>}
                  
         </span>
     );

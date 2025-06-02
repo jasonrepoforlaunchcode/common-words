@@ -3,7 +3,7 @@ import Main from "./Main";
 import Footer from "./Footer";
 import data from '../data/initLanguageData.json';
 
-const Top = () => {
+const Home = () => {
     return (
         <>
             <Header />
@@ -15,4 +15,4 @@ const Top = () => {
     );
 }
 
-export default Top;
+export default Home;

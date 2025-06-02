@@ -43,7 +43,7 @@ const AddWordForm = ({getWordData, id}) => {
             </div>
             <div className="form-group">
                 <label for="soundfile">Soundfile:</label>
-                <input type="text" name="soundfile" id="soundfile" value={formData.image} onChange={handleChange}/>
+                <input type="text" name="soundfile" id="soundfile" value={formData.soundfile} onChange={handleChange}/>
             </div>
 
             <button type="submit" onClick={sendData}>commit</button>

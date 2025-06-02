@@ -1,7 +1,7 @@
 const Footer = () => {
     return (
         <footer>
-            CommonWords 2025
+            common words 2025
         </footer>
     );
 }

@@ -98,14 +98,14 @@ const Quiz = ({wholeDeck, dueDeck, handleBackToMenu}) => {
 
     const quizControl = (
         <div className="quiz-control">
-            {!showAnswer 
-                ? <button onClick={handleShowClicked}>Show</button> 
+            {!showAnswer
+                ? <div>{curWord && <button onClick={handleShowClicked}>Show</button>}</div>
                 : <div className="grade-buttons">
                     <button onClick={handleAnswerCorrect}>Correct</button>
                     <button onClick={handleAnswerIncorrect}>Incorrect</button>
-                </div>}
+                </div>
+            }
                 <button onClick={sendBackDeckInfo}>Back</button>
-
         </div>
     )
 

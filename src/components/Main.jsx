@@ -5,8 +5,7 @@ import {setLocalData, getLocalData, updateLocalDeck, addLanguage, addDeck, delet
 import AddWordForm from './AddWordForm.jsx';
 import VocabTable from './VocabTable.jsx';
 import TraversalButton from './TraversalButton.jsx';
-import Header from './Header.jsx';
-import Footer from './Footer.jsx';
+import DeletePopUp from './DeletePopUp.jsx';
 
 const Main = ({languageData}) => {
     const oneDayMS = 86400000;
@@ -19,7 +18,8 @@ const Main = ({languageData}) => {
     const [quizStarted, setQuizStarted] = useState(false);
     const [isEditing, setEditing] = useState(false);
     const [showDeckTable, setShowDeckTable] = useState(false);
-    const [buttonColor, setButtonColor] = useState("green-background")
+    const [showingPopUp, setShowingPopUp] = useState({showing: false, name: "", id: ""});
+    
     useEffect(()=>{
         setLocalData(languageData);
         setData(getLocalData());
@@ -94,10 +94,35 @@ const Main = ({languageData}) => {
             }
         })
     }
+    
+    const showPopUpTrue = (e) =>{
+        setShowingPopUp({showing: true, name: e.target.name, id: e.target.id});
+        setEditing(true);
+    }
+
+    const showPopUpFalse = () => {
+        setShowingPopUp({showing: false, name: "", id: ""});
+        setEditing(false);
+    }
+
+    const deleteObj = (e) => {
+        const nameAndCategory = e.target.name.split(" ");
+        if (nameAndCategory.length > 1){
+            if (nameAndCategory[1] === "Language"){
+                removeLanguage(e);
+            }
+            else if(nameAndCategory[1] === "Deck"){
+                removeDeck(e);
+            }
+        }
+        showPopUpFalse();
+
+    }
+
     const languagesJSX = data.map(lang => {
         return (
             lang && <span><TraversalButton onClick={handleLanguageClick} id={lang.id.toString()} text={lang.name} isEditing={isEditing}/>
-            <TraversalButton classStyle="delete-button" onClick={removeLanguage} id={lang.id.toString()} text="x" isEditing={isEditing}/>
+            <button className='delete-button' onClick={showPopUpTrue} name={lang.name + " Language"} id={lang.id.toString()} disabled={isEditing}>x</button>
             </span>
         )
     })
@@ -119,7 +144,8 @@ const Main = ({languageData}) => {
                         <TraversalButton onClick={handleDeckClick} id={deck.id.toString()} text={deck.name} isEditing={isEditing}/>
                         <span>Total: {deck.list.length}  Due: {deck.list.filter((word) => {
                             return wordIsReadyForReview(word);
-                        }).length}  <TraversalButton onClick={removeDeck} id={deck.id.toString()} text="delete" isEditing={isEditing}/>
+                        }).length} 
+                        <button className='delete-button' onClick={showPopUpTrue} name={deck.name + " Deck"}  id={deck.id.toString()} disabled={isEditing}>x</button>
                         </span>
                     </div>
                 )
@@ -204,10 +230,10 @@ const Main = ({languageData}) => {
 
     const chooseLanguageMenu = (
         <div className="menu">
-            <div>Your Languages</div>
+            <div className="menu-heading">Languages</div>
             <div className="button-container">
                 {languagesJSX}
-                <AddItemButton handleNewListItem={addNewLanguage} sendBackEditingStatus={receiveEditingStatus}/>
+                <AddItemButton text="start new language" handleNewListItem={addNewLanguage} sendBackEditingStatus={receiveEditingStatus}/>
             </div>
         </div>
     )
@@ -217,7 +243,7 @@ const Main = ({languageData}) => {
             <div className="menu-heading">{curLanguage.name} Decks</div>
             <div>
                 {curDecksJSX}
-                <AddItemButton handleNewListItem={addNewDeck} sendBackEditingStatus={receiveEditingStatus}/>
+                <AddItemButton text="start new deck" handleNewListItem={addNewDeck} sendBackEditingStatus={receiveEditingStatus}/>
                 <TraversalButton onClick={handleBackToLanguages} id="" text="back" isEditing={isEditing}/>
             </div>
         </div>
@@ -226,21 +252,18 @@ const Main = ({languageData}) => {
 
     const deckOptionsMenu = (
         <div className="menu">
-            <div className="menu-heading">{curLanguage.name}</div>
-            <div>{curDeck.name}</div>
-
+            <div className="menu-heading">{curLanguage.name} {curDeck.name}</div>
             {showDeckTable ? <div><VocabTable deck={curDeck.list} returnNewData={getNewDeckData} /></div>
             : isEditing
                 ? <div>
                     <AddWordForm getWordData={returnWordData} id={curDeckLength}/>
                 </div>
-                : <div className="button-container">
+                : <div className="menu">
                     <span>Total: {curDeckLength} Due: {curDue.length}</span>
-                    <button onClick={setEditingTrue}>+</button> new word
-                    <button onClick={handleEditingClick}>edit deck</button>
-                    <TraversalButton onClick={handleStartQuiz} id="" text="start quiz" isEditing={isEditing}/>
+                    <button className='start-quiz' onClick={handleStartQuiz} isEditing={isEditing}>start quiz </button>
+                    <div><button className="add-button" onClick={setEditingTrue} disabled={isEditing}>+</button > new word</div>
+                    <button onClick={handleEditingClick} disabled={isEditing}>edit deck</button>
                     <TraversalButton onClick={handleBackToDecks} id="" text="back" isEditing={isEditing}/>
-                    
                 </div>}
 
         </div>
@@ -262,6 +285,7 @@ const Main = ({languageData}) => {
                         </span>
                 </div>
             }
+            {showingPopUp.showing && <DeletePopUp objectName={showingPopUp.name} eventId={showingPopUp.id} deletionRef={deleteObj} abortRef={showPopUpFalse}/>}
         </div>
     );
 }

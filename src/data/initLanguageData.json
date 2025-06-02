@@ -59,8 +59,8 @@
                                 "id": 0,
                                 "word": "cuisiner",
                                 "definition": "cook",
-                                "image": "",
-                                "soundfile": "",
+                                "image": "https://www.heart.org/-/media/AHA/H4GM/Article-Images/healthy-cooking.jpg?sc_lang=en&hash=3EC858E5C650B731BBCC6084860B8F06",
+                                "soundfile": "/audio/pronunciation_fr_cuisiner.mp3",
                                 "daysUntilNextReview": 0.0,
                                 "dateOfLastReview" : 1748034949675
 
@@ -69,8 +69,8 @@
                                 "id": 1,
                                 "word": "manger",
                                 "definition": "eat",
-                                "image": "",
-                                "soundfile": "",
+                                "image": "https://media.self.com/photos/5f490e4e4a75ee30a626683e/master/pass/woman_food_donut.jpeg",
+                                "soundfile": "/audio/pronunciation_fr_manger.mp3",
                                 "daysUntilNextReview": 10.0,
                                 "dateOfLastReview" : 1748034949675 
                             },
@@ -78,8 +78,8 @@
                                 "id": 2,
                                 "word": "nettoyer",
                                 "definition": "clean",
-                                "image": "",
-                                "soundfile": "",
+                                "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw7xaZHZi5mYQXfzqxwGE913_0koPFq9C3zA&s",
+                                "soundfile": "/audio/pronunciation_fr_nettoyer.mp3",
                                 "daysUntilNextReview": 0.0,
                                 "dateOfLastReview" : 1748034949675 
                             }
@@ -146,43 +146,6 @@
                                 "id": 2,
                                 "word": "salato",
                                 "definition": "salty",
-                                "image": "",
-                                "soundfile": "",
-                                "daysUntilNextReview": 0.0,
-                                "dateOfLastReview" : 1748034949675 
-                            }
-                        ]
-                    }
-                ]
-    },
-    {
-        "id": "1002",
-        "name": "Spanish",
-        "decks": [
-                    {"id":"10000","name":"Nouns", "list": 
-                        [
-                            {
-                                "id": 0,
-                                "word": "queso",
-                                "definition": "cheese",
-                                "image": "",
-                                "soundfile": "",
-                                "daysUntilNextReview": 0.0,
-                                "dateOfLastReview" : 1748034949675 
-                            },
-                            {
-                                "id": 1,
-                                "word": "cocina",
-                                "definition": "kitchen",
-                                "image": "",
-                                "soundfile": "",
-                                "daysUntilNextReview": 0.0,
-                                "dateOfLastReview" : 1748034949675 
-                            },
-                            {
-                                "id": 2,
-                                "word": "tenedor",
-                                "definition": "fork",
                                 "image": "",
                                 "soundfile": "",
                                 "daysUntilNextReview": 0.0,

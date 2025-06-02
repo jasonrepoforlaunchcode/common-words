@@ -18,8 +18,8 @@ const VocabTable = ({deck, returnNewData}) => {
             return <tr id={wordKey}>
                 <td name="word"><div contenteditable="true" spellcheck="false">{word.word}</div></td>
                 <td name="definition"><div contenteditable="true" spellcheck="false">{word.definition}</div></td>
-                <td name="image"><div contenteditable="true" spellcheck="false">{word.image}</div></td>
-                <td name="soundfile"><div contenteditable="true" spellcheck="false">{word.soundfile}</div></td>
+                <td className="image-cell" name="image"><div contenteditable="true" spellcheck="false">{word.image}</div></td>
+                <td className="soundfile-cell" name="soundfile"><div contenteditable="true" spellcheck="false">{word.soundfile}</div></td>
                 <td><button onClick={removeRow} id={wordKey}>delete</button></td>
             </tr>
         }
